@@ -12,9 +12,9 @@
         <header class=" sticky top-0 z-50 border-b border-slate-400/15 bg-slate-900/70 backdrop-blur-md">
             <div class="max-w-8xl mx-auto flex gap-4 py-4 px-8 items-center">
                 <a href="" class="text-white text-xl font-medium">BearDocs</a>
-                <div class="text-sky-400 bg-sky-400/10 text-xs py-2 px-4 rounded-full font-medium">New! Template for documentation</div>
+                <div class="hidden lg:block text-sky-400 bg-sky-400/10 text-xs py-2 px-4 rounded-full font-medium">New! Template for documentation</div>
                 <!-- Menu -->
-                <nav class="ml-auto">
+                <nav class="hidden lg:block ml-auto">
                     <ul class="flex gap-8 text-slate-200 font-semibold text-sm">
                         <li class="hover:text-sky-400"><a href="">Docs</a></li>
                         <li class="hover:text-sky-400"><a href="">Components</a></li>
@@ -23,23 +23,30 @@
                     </ul>
                 </nav>
 
-                
-
                 <!-- Buttons -->
-                <div class="flex items-center gap-6 border-l-slate-400/15 border-l pl-6 ml-2">
+                <div class=" hidden lg:flex items-center gap-6 border-l-slate-400/15 border-l pl-6 ml-2">
                     <button class="text-slate-400"><svg viewBox="0 0 24 24" fill="none" class="w-6 h-6"><path fill-rule="evenodd" clip-rule="evenodd" d="M17.715 15.15A6.5 6.5 0 0 1 9 6.035C6.106 6.922 4 9.645 4 12.867c0 3.94 3.153 7.136 7.042 7.136 3.101 0 5.734-2.032 6.673-4.853Z" class="fill-sky-400/20"></path><path d="m17.715 15.15.95.316a1 1 0 0 0-1.445-1.185l.495.869ZM9 6.035l.846.534a1 1 0 0 0-1.14-1.49L9 6.035Zm8.221 8.246a5.47 5.47 0 0 1-2.72.718v2a7.47 7.47 0 0 0 3.71-.98l-.99-1.738Zm-2.72.718A5.5 5.5 0 0 1 9 9.5H7a7.5 7.5 0 0 0 7.5 7.5v-2ZM9 9.5c0-1.079.31-2.082.845-2.93L8.153 5.5A7.47 7.47 0 0 0 7 9.5h2Zm-4 3.368C5 10.089 6.815 7.75 9.292 6.99L8.706 5.08C5.397 6.094 3 9.201 3 12.867h2Zm6.042 6.136C7.718 19.003 5 16.268 5 12.867H3c0 4.48 3.588 8.136 8.042 8.136v-2Zm5.725-4.17c-.81 2.433-3.074 4.17-5.725 4.17v2c3.552 0 6.553-2.327 7.622-5.537l-1.897-.632Z" class="fill-sky-500"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M17 3a1 1 0 0 1 1 1 2 2 0 0 0 2 2 1 1 0 1 1 0 2 2 2 0 0 0-2 2 1 1 0 1 1-2 0 2 2 0 0 0-2-2 1 1 0 1 1 0-2 2 2 0 0 0 2-2 1 1 0 0 1 1-1Z" class="fill-sky-500"></path></svg></button>
                     <a href="" class="text-slate-400 hover:text-slate-200"><svg viewBox="0 0 16 16" class="w-5 h-5" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg></a>          
                 </div>
 
+                <!-- Responsive Buttons -->
+                <div class=" lg:hidden flex items-center gap-6 border-l-slate-400/15 border-l pl-6 ml-auto">
+                    <button class="text-slate-400">
+                        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m19 19-3.5-3.5"></path><circle cx="11" cy="11" r="6"></circle></svg>
+                    </button>
+
+                    <button class="text-slate-400">
+                        <svg width="24" height="24" fill="none" aria-hidden="true"><path d="M12 6v.01M12 12v.01M12 18v.01M12 7a1 1 0 1 1 0-2 1 1 0 0 1 0 2Zm0 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Zm0 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                    </button>
+                </div>
             </div>
         </header>
 
+        <!-- Sidebar -->
         <div class="px-8" >
             <div class="max-w-8xl mx-auto relative">
                
-
-                <!-- Sidebar -->
-                <div class= "fixed px-8 w-[19rem] top-14 bottom-0 h-auto text-white overflow-y-auto ">
+                <div class= "hidden lg:block fixed px-8 w-[19rem] top-14 bottom-0 h-auto text-white overflow-y-auto ">
                     <!-- Search form -->
                     <div class="search sticky top-0">
                         <div class="h-12 bg-slate-900"></div>
@@ -318,8 +325,8 @@
 
 
                 <!-- Main Content -->
-                <main class="pl-[19rem]">
-                    <article class="pl-12 pt-12 text-white">
+                <main class="pl-0 lg:pl-[19rem]">
+                    <article class=" pl-0 lg:pl-12 pt-12 text-white">
                         <header class="max-w-4xl">
                             <span class="text-sky-400 font-bold text-sm">Installation</span>
                             <h1>Getting started</h1>
@@ -330,18 +337,18 @@
 
                         <!-- Tabs -->
                         <div id="tabs">
-                            <ul class="flex gap-6 text-sm font-medium text-slate-200 border-b border-slate-800">
+                            <ul class="flex gap-6 text-sm font-medium text-slate-200 border-b border-slate-800 overflow-x-auto overflow-y-clip">
                                 <li>
-                                    <h3><a href="" class="border-b-2 border-sky-400 block py-3 -mb-px text-sky-400">Taliwind CLI</a></h3>
+                                    <h3><a href="" class="whitespace-nowrap border-b-2 border-sky-400 block py-3 -mb-px text-sky-400">Taliwind CLI</a></h3>
                                 </li>
                                 <li>
-                                    <h3><a href="" class="border-b-2 border-transparent  hover:border-slate-600 block py-3 -mb-px">Using postCSS</a></h3>
+                                    <h3><a href="" class="whitespace-nowrap border-b-2 border-transparent  hover:border-slate-600 block py-3 -mb-px">Using postCSS</a></h3>
                                 </li>
                                 <li>
-                                    <h3><a href="" class="border-b-2 border-transparent  hover:border-slate-600 block py-3 -mb-px">Framework Guides</a></h3>
+                                    <h3><a href="" class="whitespace-nowrap border-b-2 border-transparent  hover:border-slate-600 block py-3 -mb-px">Framework Guides</a></h3>
                                 </li>
                                 <li>
-                                    <h3><a href="" class="border-b-2 border-transparent  hover:border-slate-600 block py-3 -mb-px">Play CDN</a></h3>
+                                    <h3><a href="" class="whitespace-nowrap border-b-2 border-transparent  hover:border-slate-600 block py-3 -mb-px">Play CDN</a></h3>
                                 </li>
                             </ul>
 
@@ -354,7 +361,7 @@
                                 <ol>
 
                                     <!-- TAB 1 -->
-                                    <li class="grid grid-cols-[2fr_3fr] gap-16 border-l border-slate-800 pl-7 pb-10 relative before:content-['1'] before:absolute before:border-t before:border-slate-400/15 before:rounded-md before:bg-slate-800 before:w-6 before:h-6 before:text-xs before:font-semibold before:flex before:items-center before:justify-center before:-ml-px before:-translate-x-1/2">
+                                    <li class="grid xl:grid-cols-[2fr_3fr] xl:gap-16 border-l border-slate-800 pl-7 pb-10 relative before:content-['1'] before:absolute before:border-t before:border-slate-400/15 before:rounded-md before:bg-slate-800 before:w-6 before:h-6 before:text-xs before:font-semibold before:flex before:items-center before:justify-center before:-ml-px before:-translate-x-1/2">
                                         <!-- Instruction -->
                                         <div class="text-sm max-w-s">
                                             <h3>Install Tailwind CSS</h3>
@@ -395,7 +402,7 @@
                                     </li>
 
                                     <!-- TAB 2 -->
-                                    <li class="grid grid-cols-[2fr_3fr] gap-16 border-l border-slate-800 pl-7 pb-10 relative before:content-['2'] before:absolute before:border-t before:border-slate-400/15 before:rounded-md before:bg-slate-800 before:w-6 before:h-6 before:text-xs before:font-semibold before:flex before:items-center before:justify-center before:-ml-px before:-translate-x-1/2">
+                                    <li class="grid xl:grid-cols-[2fr_3fr] xl:gap-16 border-l border-slate-800 pl-7 pb-10 relative before:content-['2'] before:absolute before:border-t before:border-slate-400/15 before:rounded-md before:bg-slate-800 before:w-6 before:h-6 before:text-xs before:font-semibold before:flex before:items-center before:justify-center before:-ml-px before:-translate-x-1/2">
                                         <!-- Instruction -->
                                         <div class="text-sm max-w-s">
                                             <h3>Configure your template paths</h3>
@@ -437,7 +444,7 @@
                                     </li>
 
                                     <!-- TAB 3 -->
-                                    <li class="grid grid-cols-[2fr_3fr] gap-16 border-l border-slate-800 pl-7 pb-10 relative before:content-['3'] before:absolute before:border-t before:border-slate-400/15 before:rounded-md before:bg-slate-800 before:w-6 before:h-6 before:text-xs before:font-semibold before:flex before:items-center before:justify-center before:-ml-px before:-translate-x-1/2">
+                                    <li class="grid xl:grid-cols-[2fr_3fr] xl:gap-16 border-l border-slate-800 pl-7 pb-10 relative before:content-['3'] before:absolute before:border-t before:border-slate-400/15 before:rounded-md before:bg-slate-800 before:w-6 before:h-6 before:text-xs before:font-semibold before:flex before:items-center before:justify-center before:-ml-px before:-translate-x-1/2">
                                         <!-- Instruction -->
                                         <div class="text-sm max-w-s">
                                             <h3>Add the Tailwind directives to your CSS</h3>
@@ -471,7 +478,7 @@
                                          </div>
                                     </li>
                                     <!-- TAB 4 -->
-                                    <li class="grid grid-cols-[2fr_3fr] gap-16 border-l border-slate-800 pl-7 pb-10 relative before:content-['4'] before:absolute before:border-t before:border-slate-400/15 before:rounded-md before:bg-slate-800 before:w-6 before:h-6 before:text-xs before:font-semibold before:flex before:items-center before:justify-center before:-ml-px before:-translate-x-1/2">
+                                    <li class="grid xl:grid-cols-[2fr_3fr] xl:gap-16 border-l border-slate-800 pl-7 pb-10 relative before:content-['4'] before:absolute before:border-t before:border-slate-400/15 before:rounded-md before:bg-slate-800 before:w-6 before:h-6 before:text-xs before:font-semibold before:flex before:items-center before:justify-center before:-ml-px before:-translate-x-1/2">
                                         <!-- Instruction -->
                                         <div class="text-sm max-w-s">
                                             <h3>Start the Tailwind CLI build process</h3>
@@ -505,7 +512,7 @@
                                          </div>
                                     </li>
                                     <!-- TAB 5 -->
-                                    <li class="grid grid-cols-[2fr_3fr] gap-16 border-l border-slate-800 pl-7 pb-10 relative before:content-['5'] before:absolute before:border-t before:border-slate-400/15 before:rounded-md before:bg-slate-800 before:w-6 before:h-6 before:text-xs before:font-semibold before:flex before:items-center before:justify-center before:-ml-px before:-translate-x-1/2">
+                                    <li class="grid xl:grid-cols-[2fr_3fr] xl:gap-16 border-l border-slate-800 pl-7 pb-10 relative before:content-['5'] before:absolute before:border-t before:border-slate-400/15 before:rounded-md before:bg-slate-800 before:w-6 before:h-6 before:text-xs before:font-semibold before:flex before:items-center before:justify-center before:-ml-px before:-translate-x-1/2">
                                         <!-- Instruction -->
                                         <div class="text-sm max-w-s">
                                             <h3>SStart using Tailwind in your HTML</h3>
@@ -518,7 +525,7 @@
                                             <!-- Code Top bar -->
                                             <div class="flex pt-2">
                                                 <!-- Tab -->
-                                                <div class="text-sky-300 text-xs pt-4 pt-2 px-4 border-b border-sky-300">
+                                                <div class="text-sky-300 text-xs pt-6 px-4 border-b border-sky-300">
                                                     <span>src/index.html</span>
                                                 </div>
                                                 <!-- Empty Row -->
