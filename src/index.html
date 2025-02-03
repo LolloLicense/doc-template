@@ -4,10 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="./output.css" rel="stylesheet">
+  <script src="./js/sidebar.js"defer></script>
 </head>
 <body class="bg-slate-900">
 
     <div class="doc-app">
+        <div class="overlay hidden h-screen w-full z-[60] fixed backdrop-blur-sm bg-slate-900/70 lg:hidden"></div>
         <!-- Header -->
         <header class=" sticky top-0 z-50 border-b border-slate-400/15 bg-slate-900/70 backdrop-blur-md">
             <div class="max-w-8xl mx-auto flex gap-4 py-4 px-8 items-center">
@@ -39,16 +41,36 @@
                         <svg width="24" height="24" fill="none" aria-hidden="true"><path d="M12 6v.01M12 12v.01M12 18v.01M12 7a1 1 0 1 1 0-2 1 1 0 0 1 0 2Zm0 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Zm0 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
                     </button>
                 </div>
+
+            </div>
+            <!-- Responsive side -->
+            <div class="border-t border-slate-400/15 lg:hidden">
+                <div class="max-w-8xl mx-auto flex gap-4 py-4 px-8 items-center">
+                    <button class="sidebar-open text-slate-400">
+                        <svg width="24" height="24"><path d="M5 6h14M5 12h14M5 18h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path></svg>
+                    </button>
+                    <ol class="flex">
+                        <li class="text-slate-400 flex items-center">
+                            <a href="">Getting started</a>
+                            <svg width="3" height="6" aria-hidden="true" class="mx-3 overflow-visible text-slate-400"><path d="M0 0L3 3L0 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg>
+                        </li>
+                        <li class="text-slate-200 font-medium">Installation</li>
+                    </ol>
+                </div>
             </div>
         </header>
 
         <!-- Sidebar -->
         <div class="px-8" >
             <div class="max-w-8xl mx-auto relative">
+
                
-                <div class= "hidden lg:block fixed px-8 w-[19rem] top-14 bottom-0 h-auto text-white overflow-y-auto ">
+                <div class= "sidebar hidden bg-slate-800 z-[60] top-0 left-0 pt-8 lg:pt-0 px-8 lg:pl-0 pl-8 lg:pr-8 lg:left-auto lg:block fixed xl:px-8 w-[19rem] lg:top-14 lg:bg-transparent bottom-0 h-auto text-white overflow-y-auto ">
+                    <button class=" sidebar-close lg:hidden text-slate-400 absolute right-8 top-10">
+                        <svg viewBox="0 0 10 10" class="w-2.5 h-2.5 overflow-visible"><path d="M0 0L10 10M10 0L0 10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path></svg>
+                    </button>
                     <!-- Search form -->
-                    <div class="search sticky top-0">
+                    <div class=" hidden lg:block search sticky top-0">
                         <div class="h-12 bg-slate-900"></div>
                         <div class="relative flex items-center bg-slate-900">
                             <label for="search" class="text-slate-400 absolute left-2">
@@ -364,7 +386,7 @@
                                     <li class="grid xl:grid-cols-[2fr_3fr] xl:gap-16 border-l border-slate-800 pl-7 pb-10 relative before:content-['1'] before:absolute before:border-t before:border-slate-400/15 before:rounded-md before:bg-slate-800 before:w-6 before:h-6 before:text-xs before:font-semibold before:flex before:items-center before:justify-center before:-ml-px before:-translate-x-1/2">
                                         <!-- Instruction -->
                                         <div class="text-sm max-w-s">
-                                            <h3>Install Tailwind CSS</h3>
+                                            <h3 class>Install Tailwind CSS</h3>
                                             <p>
                                                 Install <span class="text-slate-200">tailwindcss</span> via npm, and create your <span class="text-slate-200">tailwind.config.js</span> file.
                                             </p>
