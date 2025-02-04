@@ -5,11 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="./output.css" rel="stylesheet">
   <script src="./js/sidebar.js"defer></script>
+  <script src="./js/searchModal.js"defer></script>
 </head>
 <body class="bg-slate-900">
 
     <div class="doc-app">
-        <div class="overlay hidden h-screen w-full z-[60] fixed backdrop-blur-sm bg-slate-900/70 lg:hidden"></div>
+        <div class="overlay hidden h-screen w-full z-[60] fixed backdrop-blur-sm bg-slate-900/70"></div>
+        
+        <div class="hidden search-modal fixed w-full max-w-2xl bg-slate-900 z-[60] left-1/2 -translate-x-1/2 top-20 px-8">
+            <div class="flex items-center relative">
+                <label for="search" class="text-slate-400 absolute left-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                    </svg>  
+                </label>
+                <input type="text" class="search-input text-slate-200 flex-grow bg-slate-800 hover:bg-slate-700 py-4 px-14 rounded-md w-full max-w-full border-t border-slate-400/15 text-sm focus:outline-none" placeholder="Search documentation">
+                <button class="search-close bg-slate-600 text-slate-400 uppercase p-1.5 text-[8px] rounded-md absolute right-4">Esc</button>
+            </div>
+        </div>
+        
         <!-- Header -->
         <header class=" sticky top-0 z-50 border-b border-slate-400/15 bg-slate-900/70 backdrop-blur-md">
             <div class="max-w-8xl mx-auto flex gap-4 py-4 px-8 items-center">
@@ -33,7 +47,7 @@
 
                 <!-- Responsive Buttons -->
                 <div class=" lg:hidden flex items-center gap-6 border-l-slate-400/15 border-l pl-6 ml-auto">
-                    <button class="text-slate-400">
+                    <button class="search-button text-slate-400">
                         <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m19 19-3.5-3.5"></path><circle cx="11" cy="11" r="6"></circle></svg>
                     </button>
 
@@ -43,7 +57,7 @@
                 </div>
 
             </div>
-            <!-- Responsive side -->
+            <!-- Responsive sidebar -->
             <div class="border-t border-slate-400/15 lg:hidden">
                 <div class="max-w-8xl mx-auto flex gap-4 py-4 px-8 items-center">
                     <button class="sidebar-open text-slate-400">
@@ -65,12 +79,12 @@
             <div class="max-w-8xl mx-auto relative">
 
                
-                <div class= "sidebar hidden bg-slate-800 z-[60] top-0 left-0 pt-8 lg:pt-0 px-8 lg:pl-0 pl-8 lg:pr-8 lg:left-auto lg:block fixed xl:px-8 w-[19rem] lg:top-14 lg:bg-transparent bottom-0 h-auto text-white overflow-y-auto ">
+                <div class= "sidebar hidden bg-slate-800 z-[60] lg:z-10 top-0 left-0 pt-8 lg:pt-0 px-8 lg:pl-0 pl-8 lg:pr-8 lg:left-auto lg:block fixed xl:px-8 w-[19rem] lg:top-14 lg:bg-transparent bottom-0 h-auto text-white overflow-y-auto ">
                     <button class=" sidebar-close lg:hidden text-slate-400 absolute right-8 top-10">
                         <svg viewBox="0 0 10 10" class="w-2.5 h-2.5 overflow-visible"><path d="M0 0L10 10M10 0L0 10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path></svg>
                     </button>
                     <!-- Search form -->
-                    <div class=" hidden lg:block search sticky top-0">
+                    <div class=" pt-8 hidden lg:block search sticky top-0">
                         <div class="h-12 bg-slate-900"></div>
                         <div class="relative flex items-center bg-slate-900">
                             <label for="search" class="text-slate-400 absolute left-2">
