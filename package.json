@@ -1,4 +1,9 @@
 {
+  "private": true,
+  "scripts": {
+    "dev": "npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch",
+    "serve": "python3 -m http.server 5173 --directory src"
+  },
   "devDependencies": {
     "tailwindcss": "^4.0.3"
   },
